@@ -1,4 +1,4 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/stageConfiguration/1.0.0/schema.json",
-  "aiInstructions": null
+  "aiInstructions": "Use fact rides to answer questions about ride metrics. Use dim date to answer questions about time."
 }
