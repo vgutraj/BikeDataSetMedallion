@@ -28,7 +28,7 @@
     },
     {
       "id": "2252840e-52cf-47f9-b76c-41e4ed13668c",
-      "is_selected": true,
+      "is_selected": false,
       "display_name": "gold_dim_date",
       "type": "semantic_model.table",
       "description": null,
