@@ -1,0 +1,123 @@
+table gold_fact_rides
+	lineageTag: 57974100-1da1-4c81-8234-612ced16397c
+	sourceLineageTag: [dbo].[gold_fact_rides]
+
+	column ride_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1879b369-441f-45f9-8524-ae223052e446
+		sourceLineageTag: ride_id
+		summarizeBy: none
+		sourceColumn: ride_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 81c56d49-6d14-42e6-8a5e-a06c1aefdb6d
+		sourceLineageTag: date_key
+		summarizeBy: none
+		sourceColumn: date_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_station_key
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: e06ef4c5-9338-4002-909c-eb0e9e83d833
+		sourceLineageTag: start_station_key
+		summarizeBy: none
+		sourceColumn: start_station_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_station_key
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 79392afc-30b2-43c9-8461-eb3bdcf7a40c
+		sourceLineageTag: end_station_key
+		summarizeBy: none
+		sourceColumn: end_station_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column bike_type_key
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: e6c43806-4ba2-4c37-b6b2-808029c4944c
+		sourceLineageTag: bike_type_key
+		summarizeBy: none
+		sourceColumn: bike_type_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column rider_type_key
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d2afa72-4753-4b1b-a0be-01ef7c975e46
+		sourceLineageTag: rider_type_key
+		summarizeBy: none
+		sourceColumn: rider_type_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ride_duration_minutes
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ef3556fc-418b-4a32-a309-3c0d2009aa82
+		sourceLineageTag: ride_duration_minutes
+		summarizeBy: sum
+		sourceColumn: ride_duration_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column started_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 588a4fca-1c93-40ee-af43-9ba944233f59
+		sourceLineageTag: started_at
+		summarizeBy: none
+		sourceColumn: started_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column ended_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 01262e5a-8b97-4069-8d92-88f189cb17ca
+		sourceLineageTag: ended_at
+		summarizeBy: none
+		sourceColumn: ended_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_fact_rides = entity
+		mode: directLake
+		source
+			entityName: gold_fact_rides
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

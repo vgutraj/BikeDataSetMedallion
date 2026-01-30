@@ -1,0 +1,23 @@
+table gold_dim_rider
+	lineageTag: d7584b1a-f519-47c3-ac8e-39e59b6aafa6
+	sourceLineageTag: [dbo].[gold_dim_rider]
+
+	column rider_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e84d02fa-accf-4f81-851d-d6479752b98b
+		sourceLineageTag: rider_type
+		summarizeBy: none
+		sourceColumn: rider_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_dim_rider = entity
+		mode: directLake
+		source
+			entityName: gold_dim_rider
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

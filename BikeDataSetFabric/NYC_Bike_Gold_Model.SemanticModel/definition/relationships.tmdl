@@ -1,0 +1,21 @@
+relationship 7e44f754-c373-96fe-c748-234ea1ab4066
+	fromColumn: gold_fact_rides.start_station_key
+	toColumn: gold_dim_station.station_id
+
+relationship 78170efd-0b89-bffd-0758-16c32db53eba
+	isActive: false
+	fromColumn: gold_fact_rides.end_station_key
+	toColumn: gold_dim_station.station_id
+
+relationship f2db0a65-4b33-dec5-a5ca-f58e5fc3ad18
+	fromColumn: gold_fact_rides.rider_type_key
+	toColumn: gold_dim_rider.rider_type
+
+relationship b8ed6a30-8da6-635c-8a4d-db4eba13c9da
+	fromColumn: gold_fact_rides.date_key
+	toColumn: gold_dim_date.date
+
+relationship f1634262-0c45-2fdd-2bed-856adb754dff
+	fromColumn: gold_fact_rides.bike_type_key
+	toColumn: gold_dim_biketype.bike_type
+

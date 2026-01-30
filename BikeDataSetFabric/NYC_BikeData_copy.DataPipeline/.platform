@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "NYC_BikeData_copy",
+    "description": "This pipeline loads data from files into a table, then processes it in two steps to improve and refine the data."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "59cfab05-e91c-bd73-4693-6c66baa6d344"
+  }
+}

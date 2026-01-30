@@ -1,0 +1,23 @@
+table gold_dim_biketype
+	lineageTag: 92c05c77-8262-4303-bd1c-aef4fd0bc18f
+	sourceLineageTag: [dbo].[gold_dim_biketype]
+
+	column bike_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 388ab750-77ad-4313-9c3e-ff9f79829a3e
+		sourceLineageTag: bike_type
+		summarizeBy: none
+		sourceColumn: bike_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_dim_biketype = entity
+		mode: directLake
+		source
+			entityName: gold_dim_biketype
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

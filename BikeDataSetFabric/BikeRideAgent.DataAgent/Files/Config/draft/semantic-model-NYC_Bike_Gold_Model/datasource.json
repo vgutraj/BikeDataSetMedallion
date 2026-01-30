@@ -1,0 +1,201 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "6d254e19-d270-be94-4f4f-29e0978cc2bd",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "NYC_Bike_Gold_Model",
+  "type": "semantic_model",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "92c05c77-8262-4303-bd1c-aef4fd0bc18f",
+      "is_selected": true,
+      "display_name": "gold_dim_biketype",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "388ab750-77ad-4313-9c3e-ff9f79829a3e",
+          "is_selected": true,
+          "display_name": "bike_type",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "2252840e-52cf-47f9-b76c-41e4ed13668c",
+      "is_selected": true,
+      "display_name": "gold_dim_date",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "475aa57f-ec43-416b-9bb7-b1d242576920",
+          "is_selected": true,
+          "display_name": "date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "33f69564-2d02-4b77-9de7-2ffb73ead10e",
+          "is_selected": true,
+          "display_name": "day",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0a4e2618-cb25-428b-888d-7f3ad96584a2",
+          "is_selected": true,
+          "display_name": "day_of_week",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a7ffa682-d91a-4aaf-a2f0-0236ebf6820a",
+          "is_selected": true,
+          "display_name": "month",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fce87bf6-7d28-4a8a-bbdd-d356bd6e11c8",
+          "is_selected": true,
+          "display_name": "week",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e56dbcd5-f9aa-4126-84c4-f4170f66e8fa",
+          "is_selected": true,
+          "display_name": "year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d7584b1a-f519-47c3-ac8e-39e59b6aafa6",
+      "is_selected": true,
+      "display_name": "gold_dim_rider",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "e84d02fa-accf-4f81-851d-d6479752b98b",
+          "is_selected": true,
+          "display_name": "rider_type",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "5219b817-a916-4d23-821d-9698fc0171c0",
+      "is_selected": true,
+      "display_name": "gold_dim_station",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "d4907318-fdea-426e-9b08-e67d002957ff",
+          "is_selected": true,
+          "display_name": "latitude",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "24bb7c7a-9d5e-4ef7-8a38-e041fac862be",
+          "is_selected": true,
+          "display_name": "longitude",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8db662b1-8f85-4215-b12b-5e9cb072f508",
+          "is_selected": true,
+          "display_name": "station_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cf7bfd2c-0070-4b02-b892-423a793a29d0",
+          "is_selected": true,
+          "display_name": "station_name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "57974100-1da1-4c81-8234-612ced16397c",
+      "is_selected": true,
+      "display_name": "gold_fact_rides",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "01262e5a-8b97-4069-8d92-88f189cb17ca",
+          "is_selected": true,
+          "display_name": "ended_at",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ef3556fc-418b-4a32-a309-3c0d2009aa82",
+          "is_selected": true,
+          "display_name": "ride_duration_minutes",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1879b369-441f-45f9-8524-ae223052e446",
+          "is_selected": true,
+          "display_name": "ride_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "588a4fca-1c93-40ee-af43-9ba944233f59",
+          "is_selected": true,
+          "display_name": "started_at",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

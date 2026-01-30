@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "NYC_Bike_Gold_Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6d254e19-d270-be94-4f4f-29e0978cc2bd"
+  }
+}
